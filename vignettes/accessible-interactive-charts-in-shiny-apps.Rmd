@@ -1,0 +1,19 @@
+---
+title: "accessible-interactive-charts-in-shiny-apps"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{accessible-interactive-charts-in-shiny-apps}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ROvis.shiny)
+```
