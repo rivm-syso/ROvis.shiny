@@ -21,9 +21,13 @@ Suggests:
     pkgdown (>= 2.0.9),
     quarto (>= 1.4),
     testthat (>= 3.0.0),
+    ggplot2,
     highcharter (>= 0.9.4),
     echarts4r (>= 0.4.6),
     plotly (>= 4.10.4),
+    tibble,
+    tidyr,
+    webshot2,
     ROvis.utils,
     knitr,
     rmarkdown
