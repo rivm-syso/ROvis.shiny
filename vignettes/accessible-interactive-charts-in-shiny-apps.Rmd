@@ -48,7 +48,7 @@ If you would like to see the interactive plots and apps in function, then run th
 
 ## Example data
 ```{r setup, include = TRUE}
-library(ROvis)
+library(ROvis.shiny) # nolint: missing_package_linter.
 
 example_data <- tibble::tibble(
   `Leeftijdsgroep` = rep(c("A", "B", "C"), each = 2),
