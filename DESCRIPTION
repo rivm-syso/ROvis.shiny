@@ -28,8 +28,8 @@ Suggests:
     knitr,
     rmarkdown
 Remotes:
-  git@github.com:rivm-syso/ROvis.utils
-  git@github.com:rivm-syso/ROvis.table
+  git@github.com:rivm-syso/ROvis.utils,
+  git@github.com:rivm-syso/ROvis.table,
   git@github.com:rivm-syso/ROvis.plotly
 VignetteBuilder: knitr
 Config/Roxygen2/markdown: TRUE
