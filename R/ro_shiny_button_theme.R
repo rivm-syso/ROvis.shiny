@@ -28,7 +28,8 @@
 #' }
 ro_shiny_button_theme <- function() {
   tags$head(
-    tags$style(HTML("
+    tags$style(HTML(
+      "
     .custom-icon-btn {
       align-items: center; justify-content: center;
       background-color: white; border: 1px solid white; border-radius: 0px;
@@ -41,6 +42,7 @@ ro_shiny_button_theme <- function() {
     .custom-icon { fill: none; stroke: #154273; stroke-width: 1;
                     margin-right: 5px; vertical-align: bottom; display: inline-block; }
     .button-container { display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 10px; }
-  "))
+  "
+    ))
   )
 }

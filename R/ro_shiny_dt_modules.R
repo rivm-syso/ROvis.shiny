@@ -61,11 +61,14 @@ ro_shiny_dt_server <- function(id, data, caption, sorting = FALSE, pagelength = 
 
       return(dt_df)
     })
-    session$onFlushed(function() {
-      shinyjs::runjs(sprintf(
-        "var el = document.getElementById('%s'); if(el) el.removeAttribute('aria-live');",
-        session$ns("table")
-      ))
-    }, once = FALSE)
+    session$onFlushed(
+      function() {
+        shinyjs::runjs(sprintf(
+          "var el = document.getElementById('%s'); if(el) el.removeAttribute('aria-live');",
+          session$ns("table")
+        ))
+      },
+      once = FALSE
+    )
   })
 }

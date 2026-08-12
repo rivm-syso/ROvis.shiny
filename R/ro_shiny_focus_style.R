@@ -27,7 +27,8 @@
 #' }
 ro_shiny_focus_style <- function() {
   tags$head(
-    tags$style(HTML("
+    tags$style(HTML(
+      "
    /* focus-indicator for all elements */
     a:focus, a:focus-visible,
     button:focus, button:focus-visible,
@@ -41,6 +42,7 @@ ro_shiny_focus_style <- function() {
       outline-offset: 0 !important;
       z-index: 10;
     }
-  "))
+  "
+    ))
   )
 }

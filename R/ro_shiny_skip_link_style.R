@@ -33,7 +33,8 @@
 #' }
 ro_shiny_skip_link_style <- function() {
   tags$head(
-    tags$style(HTML("
+    tags$style(HTML(
+      "
     /* Skip-link focusable styles (use with .sr-only from ro_shiny_screenreader) */
     .sr-only-focusable:active,
     .sr-only-focusable:focus {
@@ -57,6 +58,7 @@ ro_shiny_skip_link_style <- function() {
       text-decoration: underline;
       border: 0;
     }
-  "))
+  "
+    ))
   )
 }

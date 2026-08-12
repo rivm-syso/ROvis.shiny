@@ -29,7 +29,8 @@
 #' }
 ro_shiny_dt_responsive <- function() {
   tags$head(
-    tags$style(HTML("
+    tags$style(HTML(
+      "
       /* Make the table responsive with a horizontal scrollbar on small screens */
       .dataTables_wrapper {
       overflow-x: auto !important;
@@ -37,6 +38,7 @@ ro_shiny_dt_responsive <- function() {
       table.dataTable {
         width: 100% !important;
       }
-  "))
+  "
+    ))
   )
 }

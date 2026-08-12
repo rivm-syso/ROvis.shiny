@@ -39,7 +39,6 @@ ro_shiny_graph_mod_ui <- function(id, plot_ui_fun) {
       plot_ui_fun(ns("chart"))
     )
   )
-
 }
 
 #' Generic Graph Module Server
@@ -92,11 +91,14 @@ ro_shiny_graph_mod_server <- function(id, render_fun, plot_data_fun) {
   moduleServer(id, function(input, output, session) {
     output$chart <- render_fun(plot_data_fun())
     # Remove aria-live from chart output
-    session$onFlushed(function() {
-      shinyjs::runjs(sprintf(
-        "var el = document.getElementById('%s'); if(el) el.removeAttribute('aria-live');",
-        session$ns("chart")
-      ))
-    }, once = FALSE)
+    session$onFlushed(
+      function() {
+        shinyjs::runjs(sprintf(
+          "var el = document.getElementById('%s'); if(el) el.removeAttribute('aria-live');",
+          session$ns("chart")
+        ))
+      },
+      once = FALSE
+    )
   })
 }

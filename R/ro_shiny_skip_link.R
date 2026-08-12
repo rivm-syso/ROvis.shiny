@@ -33,7 +33,8 @@
 #' }
 ro_shiny_skip_link <- function() {
   tags$head(
-    tags$script(HTML("
+    tags$script(HTML(
+      "
     Shiny.addCustomMessageHandler('download_csv', function(params) {
       var link = document.createElement('a');
       link.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(params.filepath);
@@ -52,9 +53,11 @@ ro_shiny_skip_link <- function() {
         });
       }
     });
-  ")),
+  "
+    )),
     #Skip link action
-    tags$script(HTML("
+    tags$script(HTML(
+      "
     $(document).on('click', '.ec-data-link', function(e) {
       // Find the skip-link's href (e.g., #myModule-data-table)
       var anchorId = $(this).attr('href');
@@ -89,6 +92,7 @@ ro_shiny_skip_link <- function() {
         }, 100);
       }
     });
-    "))
+    "
+    ))
   )
 }

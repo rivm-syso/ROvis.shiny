@@ -23,7 +23,10 @@ ro_create_custom_button <- function(input_id, label_text, svg_path) {
     inputId = input_id,
     label = span(
       tags$svg(
-        width = 19, height = 19, viewBox = "0 0 16 16", class = "custom-icon",
+        width = 19,
+        height = 19,
+        viewBox = "0 0 16 16",
+        class = "custom-icon",
         tags$path(d = svg_path)
       ),
       label_text

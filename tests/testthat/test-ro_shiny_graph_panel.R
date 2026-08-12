@@ -47,14 +47,16 @@ test_that("ro_shiny_graph_panel_ui builds complete UI", {
 
 test_that("ro_shiny_download_server observer is triggered", {
   library(shiny)
-  testServer(ro_shiny_download_server,
-             args = list(
-               data_to_download = function() data.frame(a = 1:2, b = c("x", "y")),
-               filename_prefix = "testfile",
-               svg_path = "M8 2 L8 10"
-             ), {
-               session$setInputs(btn = 1)
-               expect_true(TRUE) # Dummy expectation so testthat counts it as a real test
-             }
+  testServer(
+    ro_shiny_download_server,
+    args = list(
+      data_to_download = function() data.frame(a = 1:2, b = c("x", "y")),
+      filename_prefix = "testfile",
+      svg_path = "M8 2 L8 10"
+    ),
+    {
+      session$setInputs(btn = 1)
+      expect_true(TRUE) # Dummy expectation so testthat counts it as a real test
+    }
   )
 })

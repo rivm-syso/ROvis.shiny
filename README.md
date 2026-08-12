@@ -1,3 +1,9 @@
+<!-- badges: start -->
+[![CI](https://img.shields.io/endpoint?url=https://rivm-syso.github.io/RO.shiny/badges/ci.json)](https://github.com/rivm-syso/ROvis.shiny/actions/workflows/ci.yaml)
+[![Lint](https://img.shields.io/endpoint?url=https://rivm-syso.github.io/ROvis.shiny/badges/lint.json)](https://github.com/rivm-syso/ROvis.shiny/actions/workflows/ci.yaml)
+[![Coverage](https://img.shields.io/endpoint?url=https://rivm-syso.github.io/ROvis.shiny/badges/coverage.json)](https://github.com/rivm-syso/ROvis.shiny/actions/workflows/ci.yaml)
+<!-- badges: end -->
+
 # ROvis.shiny
 
 ## Rijksoverheid Visualisatie - shiny

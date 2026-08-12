@@ -23,8 +23,7 @@ ro_show_table_ui <- function(id, label_show = "Toon tabel", label_hide = "Verber
   actionButton(
     ns("btn"),
     label = span(
-      tags$svg(width = 19, height = 19, viewBox = "0 0 16 16", class = "custom-icon",
-               tags$path(d = svg_path)),
+      tags$svg(width = 19, height = 19, viewBox = "0 0 16 16", class = "custom-icon", tags$path(d = svg_path)),
       label_show
     ),
     class = "custom-icon-btn"
@@ -51,17 +50,20 @@ ro_show_table_ui <- function(id, label_show = "Toon tabel", label_hide = "Verber
 #'     svg_path = ro_icon_table()
 #'   )
 #' }
-ro_show_table_server <- function(id, svg_path,
-                                 label_show = "Toon tabel", label_hide = "Verberg tabel") {
+ro_show_table_server <- function(id, svg_path, label_show = "Toon tabel", label_hide = "Verberg tabel") {
   moduleServer(id, function(input, output, session) {
     show_table <- reactiveVal(FALSE)
     observeEvent(input$btn, {
       show_table(!show_table())
-      updateActionButton(session, "btn",
+      updateActionButton(
+        session,
+        "btn",
         label = HTML(
           paste0(
             "<svg width=\"19\" height=\"19\" viewBox=\"0 0 16 16\" class=\"custom-icon\">",
-            "<path d=\"", svg_path, "\"></path>",
+            "<path d=\"",
+            svg_path,
+            "\"></path>",
             "</svg> ",
             if (show_table()) label_hide else label_show
           )
@@ -69,12 +71,15 @@ ro_show_table_server <- function(id, svg_path,
       )
     })
     # Remove aria-live from button
-    session$onFlushed(function() {
-      shinyjs::runjs(sprintf(
-        "var el = document.getElementById('%s'); if(el) el.removeAttribute('aria-live');",
-        session$ns("btn")
-      ))
-    }, once = FALSE)
+    session$onFlushed(
+      function() {
+        shinyjs::runjs(sprintf(
+          "var el = document.getElementById('%s'); if(el) el.removeAttribute('aria-live');",
+          session$ns("btn")
+        ))
+      },
+      once = FALSE
+    )
     return(list(show_table = show_table))
   })
 }

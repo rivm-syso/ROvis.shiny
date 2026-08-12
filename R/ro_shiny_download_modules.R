@@ -23,8 +23,7 @@ ro_shiny_download_ui <- function(id, label_text = "Export", svg_path) {
   actionButton(
     ns("btn"),
     label = span(
-      tags$svg(width = 19, height = 19, viewBox = "0 0 16 16", class = "custom-icon",
-               tags$path(d = svg_path)),
+      tags$svg(width = 19, height = 19, viewBox = "0 0 16 16", class = "custom-icon", tags$path(d = svg_path)),
       label_text
     ),
     class = "custom-icon-btn"
@@ -61,10 +60,13 @@ ro_shiny_download_server <- function(id, data_to_download, filename_prefix = "da
         write.csv2(row.names = FALSE) |>
         capture.output() |>
         paste(collapse = "\n")
-      session$sendCustomMessage("download_csv", list(
-        filename = paste0(filename_prefix, "-", Sys.Date(), ".csv"),
-        filepath = csv_content
-      ))
+      session$sendCustomMessage(
+        "download_csv",
+        list(
+          filename = paste0(filename_prefix, "-", Sys.Date(), ".csv"),
+          filepath = csv_content
+        )
+      )
     })
   })
 }

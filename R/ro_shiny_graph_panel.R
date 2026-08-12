@@ -1,4 +1,3 @@
-
 #' Graph Panel Module UI
 #'
 #' @description
@@ -103,7 +102,13 @@ ro_shiny_graph_panel_ui <- function(id, plot_ui_fun, sorting = FALSE) {
 #'   )
 #' }
 ro_shiny_graph_panel_server <- function(
-  id, plot_render_fun, plot_data_fun, data, caption, sorting = FALSE, pagelength = 10
+  id,
+  plot_render_fun,
+  plot_data_fun,
+  data,
+  caption,
+  sorting = FALSE,
+  pagelength = 10
 ) {
   moduleServer(id, function(input, output, session) {
     ro_shiny_graph_mod_server("chart", plot_render_fun, plot_data_fun)
@@ -136,11 +141,14 @@ ro_shiny_graph_panel_server <- function(
     )
 
     # Remove aria-live from table_area uiOutput
-    session$onFlushed(function() {
-      shinyjs::runjs(sprintf(
-        "var el = document.getElementById('%s'); if(el) el.removeAttribute('aria-live');",
-        session$ns("table_area")
-      ))
-    }, once = FALSE)
+    session$onFlushed(
+      function() {
+        shinyjs::runjs(sprintf(
+          "var el = document.getElementById('%s'); if(el) el.removeAttribute('aria-live');",
+          session$ns("table_area")
+        ))
+      },
+      once = FALSE
+    )
   })
 }
