@@ -49,6 +49,7 @@ If you would like to see the interactive plots and apps in function, then run th
 ## Example data
 ```{r setup, include = TRUE}
 library(ROvis.shiny) # nolint: missing_package_linter.
+library(shinyjs) # nolint: missing_package_linter.
 
 example_data <- tibble::tibble(
   `Leeftijdsgroep` = rep(c("A", "B", "C"), each = 2),
@@ -84,7 +85,7 @@ g <- ggplot2::ggplot(example_data,
 
 # Make the ui and server of the app
 ui <- shiny::fluidPage(
-  shinyjs::useShinyjs(),
+  useShinyjs(),
   ro_shiny_graph_panel_ui("mod1", plotly::plotlyOutput)
 )
 
@@ -135,7 +136,7 @@ plotly_function <- function(example_data) {
 
 # Make the ui and server of the app
 ui <- shiny::fluidPage(
-  shinyjs::useShinyjs(),
+  useShinyjs(),
   ro_shiny_graph_panel_ui("mod1", plotly::plotlyOutput)
 )
 
@@ -204,7 +205,7 @@ highcharter_function <- function(example_data) {
 
 # Make the ui and server of the app
 ui <- shiny::fluidPage(
-  shinyjs::useShinyjs(),
+  useShinyjs(),
   ro_shiny_graph_panel_ui("mod1", highcharter::highchartOutput)
 )
 
@@ -266,7 +267,7 @@ echarts4r_function <- function(example_data) {
 
 # Make the ui and server of the app
 ui <- shiny::fluidPage(
-  shinyjs::useShinyjs(),
+  useShinyjs(),
   ro_shiny_graph_panel_ui("mod1", echarts4r::echarts4rOutput)
 )
 
