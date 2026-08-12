@@ -28,9 +28,9 @@ Suggests:
     knitr,
     rmarkdown
 Remotes:
-  git@github.com:rivm-syso/ROvis.utils@develop
-  git@github.com:rivm-syso/ROvis.table@develop
-  git@github.com:rivm-syso/ROvis.plotly@develop
+  git@github.com:rivm-syso/ROvis.utils
+  git@github.com:rivm-syso/ROvis.table
+  git@github.com:rivm-syso/ROvis.plotly
 VignetteBuilder: knitr
 Config/Roxygen2/markdown: TRUE
 Config/Roxygen2/version: 8.1.0
