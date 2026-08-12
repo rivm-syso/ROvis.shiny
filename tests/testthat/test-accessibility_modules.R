@@ -32,8 +32,6 @@ test_that("ro_create_custom_button returns actionButton with correct label and i
 #Test if the accessible button ui contains what it should contain?
 test_that("ro_shiny_graph_panel_ui builds complete UI", {
   library(shiny)
-  library(ROvis.table)
-  library(ROvis.plotly)
   ui <- ro_shiny_graph_panel_ui("mainid", plotOutput)
   # Is it a taglist?
   expect_s3_class(ui, "shiny.tag.list")

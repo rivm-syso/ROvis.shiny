@@ -143,7 +143,7 @@ ro_shiny_graph_panel_server <- function(
     # Remove aria-live from table_area uiOutput
     session$onFlushed(
       function() {
-        shinyjs::runjs(sprintf(
+        runjs(sprintf(
           "var el = document.getElementById('%s'); if(el) el.removeAttribute('aria-live');",
           session$ns("table_area")
         ))

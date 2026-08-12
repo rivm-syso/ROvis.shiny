@@ -73,7 +73,7 @@ ro_show_table_server <- function(id, svg_path, label_show = "Toon tabel", label_
     # Remove aria-live from button
     session$onFlushed(
       function() {
-        shinyjs::runjs(sprintf(
+        runjs(sprintf(
           "var el = document.getElementById('%s'); if(el) el.removeAttribute('aria-live');",
           session$ns("btn")
         ))

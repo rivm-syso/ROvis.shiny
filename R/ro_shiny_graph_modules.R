@@ -93,7 +93,7 @@ ro_shiny_graph_mod_server <- function(id, render_fun, plot_data_fun) {
     # Remove aria-live from chart output
     session$onFlushed(
       function() {
-        shinyjs::runjs(sprintf(
+        runjs(sprintf(
           "var el = document.getElementById('%s'); if(el) el.removeAttribute('aria-live');",
           session$ns("chart")
         ))
