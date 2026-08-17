@@ -4,7 +4,7 @@
 [![Coverage](https://img.shields.io/endpoint?url=https://rivm-syso.github.io/ROvis.shiny/badges/coverage.json)](https://github.com/rivm-syso/ROvis.shiny/actions/workflows/ci.yaml)
 <!-- badges: end -->
 
-# ROvis.shiny
+# ROvis.shiny <a href="https://github.com/rivm-syso/ROvis.shiny"><img src="man/figures/logo.png" align="right" height="138" /></a>
 
 ## Rijksoverheid Visualisatie - shiny
 
