@@ -4,16 +4,18 @@
 \name{ROvis.shiny-package}
 \alias{ROvis.shiny}
 \alias{ROvis.shiny-package}
-\title{ROvis.shiny: Rijksoverheid Visualisatie - shiny}
+\title{ROvis.shiny: Create interactive components for interactive data visualisations in Rijksoverheid style using shiny}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 ROvis.shiny is an R package that provides a comprehensive suite of utilities for visualizing in Rijksoverheid style.
 }
 \author{
-\strong{Maintainer}: spin@rivm.nl \email{spin@rivm.nl}
+\strong{Maintainer}: ROvis team \email{spin@rivm.nl}
 
 Authors:
 \itemize{
-  \item spin@rivm.nl \email{spin@rivm.nl}
+  \item ROvis team \email{spin@rivm.nl}
 }
 
 }
