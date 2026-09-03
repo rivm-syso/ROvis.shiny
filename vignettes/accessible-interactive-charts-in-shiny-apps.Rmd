@@ -169,15 +169,7 @@ knitr::include_graphics("plotly_app.png")
 This example shows how the accessibility module can be used with a highcharter plot. The accessibility features remain the same.
 `highchartOutput`	and `renderHighchart` are used in the `ro_shiny_graph_panel_ui` and `ro_shiny_graph_panel_server` modules below. 
 
-```{r highcharter, include = TRUE}
-
-# Install dependencies if not installed yet
-if (!requireNamespace("highcharter")) {
-  install.packages("highcharter", dependencies = TRUE)
-}
-if (!requireNamespace("tidyr")) {
-  install.packages("tidyr", dependencies = TRUE)
-}
+```{r highcharter, eval=knitr::opts_chunk$get("eval") && requireNamespace("highcharter", quietly = TRUE)}
 
 # Make a function for the highcharter plot
 highcharter_function <- function(example_data) {
