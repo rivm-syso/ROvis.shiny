@@ -1,22 +1,18 @@
-List all changes in chronological order (new -> old ) to the package here. After release, write release notes and/or a blogpost for the package mailing list and/or pkg down website. This NEWS.md file will be visible in the pkg down website under News > Changelog.
+# ROvis.shiny v0.1.0
 
-We have chosen to include the headers "Added", "Changed", "Fixed", and "Deprecated". You are free to change these.
-
-GitLab issue numbers are mentioned where applicable.
-
-Sentences start with a capital letter and end with a point.
-
-Use '-' before each entry.
-
-Follow guidelines in documentation of pkgdown::build_news() for version headings. 
-
-# ROvis.shiny v0.0.0.9000
+First release since `ROvis.shiny` was split out of the `ROvis` monolith into its own
+package, and the repository moved from GitLab to GitHub.
 
 ### :sparkles: Added
 
+- Moved the Shiny module functions from ROvis: `ro_shiny_graph_mod_server`,
+`ro_shiny_graph_mod_ui`, `ro_shiny_graph_panel_server`, `ro_shiny_graph_panel_ui`,
+`ro_shiny_screenreader`.
+
 ### :hammer_and_wrench: Changed
+
+- Migrated the repository from GitLab to GitHub (`rivm-syso/ROvis.shiny`).
 
 ### :bug: Fixed 
 
 ### :coffin: Deprecated
-
