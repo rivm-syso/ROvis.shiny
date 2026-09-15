@@ -13,7 +13,7 @@
 #' @examples
 #' if (interactive()) {
 #'   ui <- fluidPage(
-#'     ro_dt_theme(base_family = "Arial", sorting = FALSE),
+#'     ro_dt_theme(sorting = FALSE),
 #'     ro_shiny_screenreader(),
 #'     DTOutput("mytable")
 #'   )
