@@ -1,11 +1,11 @@
 ---
 title: "Accessible interactive charts in Shiny apps"
-output:
-  rmarkdown::html_vignette:
-  tabset: TRUE
+format:
+  html:
+    tabset: TRUE
 vignette: >
   %\VignetteIndexEntry{Accessible interactive charts in Shiny apps}
-  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEngine{quarto::html}
   %\VignetteEncoding{UTF-8}
 ---
 
