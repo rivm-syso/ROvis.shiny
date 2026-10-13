@@ -14,10 +14,8 @@ A tool to support the visualisation of graphs of echarts4r, plotly, ggplot2, hig
 ## Installation
 
 ```r
-# Install from GitHub (private repo - requires GitHub auth, e.g. a PAT
-# via usethis::create_github_token() / gitcreds, since this repo is private)
-# install.packages("remotes")
-remotes::install_github("rivm-syso/ROvis.shiny")
+# Install from GitHub
+pak::pak("rivm-syso/ROvis.shiny")
 ```
 
 
