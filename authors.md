@@ -7,7 +7,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/rivm-syso/ROvis.shiny/blob/v0.1.0/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/rivm-syso/ROvis.shiny/blob/main/DESCRIPTION)
 
 ROvis team (2026). *ROvis.shiny: Create interactive components for
 interactive data visualisations in Rijksoverheid style using 'shiny'*. R
